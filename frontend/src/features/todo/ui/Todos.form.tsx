@@ -9,11 +9,10 @@ const TodosForm = () => {
     const [editedTodo, setEditedTodo] = useState("");
     const dispatch: any = useDispatch();
     const todos = useSelector((state: any) => state.todos);
-    const userId = useSelector((state: any) => state.userId);
-    const activeTodos = todos.filter((todo: any) => todo.completed === false);
-    const completeTodos = todos.filter((todo: any) => todo.completed === true);
     const currentFilter = useSelector((state: any) => state.todoFilters);
     let currentTodos: any = [];
+    const activeTodos = todos.filter((todo: any) => todo.complete === false);
+    const completeTodos = todos.filter((todo: any) => todo.complete === true);
 
     if (currentFilter == "SHOW_COMPLETED"){
         currentTodos = completeTodos;
