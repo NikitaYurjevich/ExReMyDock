@@ -18,6 +18,7 @@ const getTodosRequest = async (payload: IGetTodosRequest) =>
 const addTodoRequest = async (payload: IAddTodoRequest) =>
     await fetch('http://localhost:8081/todos/addTodo', {
         method: 'POST',
+        credentials: 'include',
         body: JSON.stringify(payload),
         headers: {
             'Content-Type': 'application/json',
