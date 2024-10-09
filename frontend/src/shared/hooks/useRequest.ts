@@ -48,6 +48,7 @@ const useRequest = (props: IUseRequestProps) => {
         setData(data);
         setErrorMessage(null);
         if (onSuccess) {
+          console.log('onSucc');
           onSuccess(data);
         }
       } else {
