@@ -1,13 +1,13 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import '../../../app/App.css';
-import { useRequest } from '../../../shared/hooks/useRequest';
+import '@/app/App.css';
+import { useRequest } from '@/shared/hooks/useRequest';
 import {
   editTodo,
   changeEditedTodoId,
   deleteTodo,
   completeTodo,
-} from '../../../actions';
+} from '@/actions';
 import { ITodosProps } from '../types/ITodosRequest';
 import { IRootState } from '../types/RootState';
 
