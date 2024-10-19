@@ -1,26 +1,43 @@
 interface IAddTodoRequest {
-    userId: number;
-    text: string;
-    completed: boolean;
+  text: string;
+  completed: boolean;
 }
 
 interface IGetTodosRequest {
-    userId: number;
+  userId: number;
 }
 
-interface IDeleteTodoRequest{
-    id: number;
+interface IDeleteTodoRequest {
+  id: number;
 }
 
-interface ICompleteTodoRequest{
-    id: number;
-    completed: boolean;
+interface ICompleteTodoRequest {
+  id: number;
+  completed: boolean;
 }
 
-interface ISaveEditedTodoRequest{
-    id: number;
-    text: string;
+interface ISaveEditedTodoRequest {
+  id: number;
+  text: string;
 }
 
+interface ITodos {
+  id: number;
+  user_id: number;
+  text: string;
+  completed: boolean | number;
+}
 
-export type {IAddTodoRequest, IGetTodosRequest, IDeleteTodoRequest, ICompleteTodoRequest, ISaveEditedTodoRequest}
+interface ITodosProps {
+  todo: ITodos;
+}
+
+export type {
+  IAddTodoRequest,
+  IGetTodosRequest,
+  IDeleteTodoRequest,
+  ICompleteTodoRequest,
+  ISaveEditedTodoRequest,
+  ITodos,
+  ITodosProps,
+};
